@@ -1,8 +1,57 @@
-body{
-    background:#303030;
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.navbar{
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    
+    
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #000000;
+}
+    .nav ul {
+        margin: 0;
+    }
+    
+    .nav li {
+        display: inline;
+    }
+    
+    .nav a {
+        display: inline-block;
+        padding: .5em;
+        color: white;
+        text-decoration: none;
+    }
+    .main-nav li {
+        padding: 0 5%;
+    }
+    
+    .nav a:hover {
+        background-color: rgba(255, 255, 255, .3)
+    }
+    
+    .main-header {
+        background-color: rgba(0, 0, 0, .6);
+        background-image: url("Images/Header Background.jpg");
+        background-blend-mode: multiply;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+
+/*.navbar{
     min-height: 60px !important;
     margin-bottom: 0;
     border-radius: 0;
@@ -12,8 +61,9 @@ body{
     padding-top: 6px !important;
     padding-bottom: 0 !important;
     height: 33px;
+    */
 
-}
+
 .b1{
     border-left:10px dotted silver;
     border-width: thick;
