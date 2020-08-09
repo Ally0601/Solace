@@ -1,3 +1,13 @@
+<?php
+// Start the session
+session_start();
+function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
+  }
+  console_log($_SESSION['email']);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -159,7 +169,7 @@
         		
         		<div class="col-md-5 border  ">
           			<h2 class="d-flex justify-content-center text-white">SELL HERE</h2>
-					<form action="#" class="was-validated">
+					<form class="was-validated" action="list-books.php" method="post">
   					<div class="form-group ">
     					<label for="uname">Book Name:</label>
     					<input type="text" class="form-control" id="uname" placeholder="Enter the book to be sold" name="uname" required>
@@ -175,12 +185,12 @@
 					<div class="form-group ">
 						<div class="form-check-inline">
 							<label class="form-check-label">
-							  <input type="radio" class="form-check-input" name="fnf">Fiction
+							  <input type="radio" class="form-check-input" name="fnf" value="Fiction">Fiction
 							</label>
 						  </div>
 						  <div class="form-check-inline ">
 								<label class="form-check-label">
-								  <input type="radio" class="form-check-input" name="fnf">Non-fiction
+								  <input type="radio" class="form-check-input" name="fnf" value="Non-fiction">Non-fiction
 								</label>
 						  </div>
 					</div>
@@ -202,7 +212,7 @@
 					<br><br>
 			 		 <ul>
 						<li style="display:inline-block;">
-							<button type="submit" class="btn btn-danger">Submit</button>
+							<input name="sub_book" type="submit" class="btn btn-danger" value="SUBMIT">Submit</input>
 						</li>
 						<li style="display:inline-block;">
 							<a href="#"  style="color:#f4f4f4"><p>Terms & conditions apply*<p></a>

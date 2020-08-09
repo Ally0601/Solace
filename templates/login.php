@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,17 +64,17 @@
                 <div class="box-header">Welcome Back!</div>
               </div>
 
-              <form id="login-form">
+              <form id="login-form" action = "login-user.php" method="post">
                 <label>Email
                   <a href="#" title="Forgot email?" class="tip">Forgot email?</a>
                 </label>
-                <input type="text" id="login-email" class="textbox">
+                <input type="text" id="login-email" name="login-email" class="textbox">
                 <label>Password
                   <a href="#" title="Forgot password?" class="tip">Forgot password?</a>
                 </label>
-                <input type="password" id="login-password" class="textbox">
-              </form>
+                <input type="password" id="login-password" name="login-password" class="textbox">
               <button type="submit" class="proceed">Log-in to your account <i class="ion-ios-arrow-thin-right"></i></button>
+              </form>
             </div>
 
             <div class="card" id="register">
@@ -78,19 +82,21 @@
               <div id="branding-small">
               </div>
                 <div class="box-header">Register</div>
-                <form id="register-form">
+                <form id="register-form" action="register.php" method="post">
                   <label>Name</label>
-                  <input type="text" id="name" class="textbox">
+                  <input type="text" id="name"
+                  name="name" class="textbox">
 						      <label>Email</label>
-                  <input type="text" id="register-email" class="textbox">
+                  <input type="text" id="register-email" name="register-email" class="textbox">
                   <label>Password</label>
-                  <input type="password" id="register-password" class="textbox">
+                  <input type="password" id="register-password" name="register-password" class="textbox">
                   <label>Confirm Password</label>
-                  <input type="password" id="register-password-conf" class="textbox">
-                </form>
+                  <input type="password" id="register-password-conf" name="register-password-conf" class="textbox">
               </div>
-              <button type="submit" class="proceed">Create an account<i class="ion-ios-arrow-thin-right"></i></button>
+              <button type="submit" name= "create_acc" class="proceed" value="REGISTER">Create an account<i class="ion-ios-arrow-thin-right"></i></button>
+              </form>
             </div>
+
 
           </div>
 
