@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +43,7 @@
         <form class="form-inline my-2 my-lg-0">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-8"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
+              <div class="col-8"><input class="form-control mr-sm-2" type="search" placeholder="Search Genre" aria-label="Search"></div>
                 <div class="col"><button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search text-white"></i></button></div>
               </div>
             </div>
@@ -60,17 +64,17 @@
                 <div class="box-header">Welcome Back!</div>
               </div>
 
-              <form id="login-form">
+              <form id="login-form" action = "login-user.php" method="post">
                 <label>Email
                   <a href="#" title="Forgot email?" class="tip">Forgot email?</a>
                 </label>
-                <input type="text" id="login-email" class="textbox">
+                <input type="text" id="login-email" name="login-email" class="textbox">
                 <label>Password
                   <a href="#" title="Forgot password?" class="tip">Forgot password?</a>
                 </label>
-                <input type="password" id="login-password" class="textbox">
-              </form>
+                <input type="password" id="login-password" name="login-password" class="textbox">
               <button type="submit" class="proceed">Log-in to your account <i class="ion-ios-arrow-thin-right"></i></button>
+              </form>
             </div>
 
             <div class="card" id="register">
@@ -78,19 +82,21 @@
               <div id="branding-small">
               </div>
                 <div class="box-header">Register</div>
-                <form id="register-form">
+                <form id="register-form" action="register.php" method="post">
                   <label>Name</label>
-                  <input type="text" id="name" class="textbox">
+                  <input type="text" id="name"
+                  name="name" class="textbox">
 						      <label>Email</label>
-                  <input type="text" id="register-email" class="textbox">
+                  <input type="text" id="register-email" name="register-email" class="textbox">
                   <label>Password</label>
-                  <input type="password" id="register-password" class="textbox">
+                  <input type="password" id="register-password" name="register-password" class="textbox">
                   <label>Confirm Password</label>
-                  <input type="password" id="register-password-conf" class="textbox">
-                </form>
+                  <input type="password" id="register-password-conf" name="register-password-conf" class="textbox">
               </div>
-              <button type="submit" class="proceed">Create an account<i class="ion-ios-arrow-thin-right"></i></button>
+              <button type="submit" name= "create_acc" class="proceed" value="REGISTER">Create an account<i class="ion-ios-arrow-thin-right"></i></button>
+              </form>
             </div>
+
 
           </div>
 
@@ -103,41 +109,22 @@
     </div>
     <!-- LOGIN PART -->
     
-    <div class="line-footer"></div>
-      <!-- Footer -->
-    <footer class="page-footer font-small  pt-4">
-
-      <!-- Footer Elements -->
-      <div class="container-footer">
-      
-        <!-- Social buttons -->
-        <ul class="list-unstyled list-inline text-center second2">
-          <li class="list-inline-item"><a class="btn-floating btn-fb mx-1" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"> </i></a></li>
-          <li class="list-inline-item"><a class="btn-floating btn-tw mx-1" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"> </i></a></li>
-          <li class="list-inline-item"><a class="btn-floating btn-gplus mx-1" href="https://gmail.com" target="_blank"><i class="fab fa-google-plus-g"> </i></a></li>
-          <li class="list-inline-item"><a class="btn-floating btn-li mx-1" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"> </i></a></li>
-          <li class="list-inline-item"><a class="btn-floating btn-dribbble mx-1" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"> </i></a></li>
-        </ul>
-
-        <h6 class="text-uppercase mb-4 text-center font-weight-bold">Contact</h6>
-
-        <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item"><p><i class="fas fa-home mr-3"></i>New York, NY 10012, US  |</p></li>
-          <li class="list-inline-item"><p><i class="fas fa-envelope mr-3"></i>solace@gmail.com  |</p></li>
-          <li class="list-inline-item"><p><i class="fas fa-phone mr-3"></i>+ 91 90 234 567 88  |</p></li>
-          <li class="list-inline-item"><p><i class="fas fa-print mr-3"></i>+ 91 90 234 567 89</p></li>
-        </ul>
-        <!-- Social buttons -->
-      
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="line"></div>
+            <div class="second2">
+              <a href="https://instagram.com" target="_blank"> <i class="fab fa-instagram fa-3x margin"></i></a>
+              <a href="https://github.com/" target="_blank"> <i class="fab fa-github fa-3x margin"></i></a>
+              <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin fa-3x margin"></i></a>
+                  
+            </div>
+            <small class="copyright">Copyright © Solace</small>
+          </div>
+        </div>
       </div>
-      <!-- Footer Elements -->
-
-      <!-- Copyright -->
-      <div class="footer-copyright text-center  py-3">© 2020 Copyright:<a class="text-white" href="#"> Solace</a></div>
-      <!-- Copyright -->
-
     </footer>
-    <!-- Footer -->
 
     <script>
       var login = $("#login");
