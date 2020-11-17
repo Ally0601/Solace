@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <link rel="stylesheet" href="static/css/style.css">
+    <!-- <link rel="stylesheet" href="static/css/home.css"> -->
 
     <link rel="icon" href="static/img/icon1.svg" type="image/gif" sizes="16x16">
     <title>Solace | Your Virtual BookStore</title>
@@ -31,14 +32,14 @@
           <li class="nav-item active"><a class="nav-link disabled" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="templates/about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="templates/vision.html">Vision</a></li>
-          <li class="nav-item"><a class="nav-link" href="templates/login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="templates/login.php">Login</a></li>
         </ul>
 
         <!-- Navigation Search Bar -->
-        <form class="form-inline my-2 my-lg-0">
+        <form action="templates/login.php" class="form-inline my-2 my-lg-0">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-8"><input class="form-control mr-sm-2" type="search" placeholder="Search Genre" aria-label="Search"></div>
+              <div class="col-8"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
                 <div class="col"><button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search text-white"></i></button></div>
               </div>
             </div>
@@ -54,7 +55,7 @@
 
       <div class="welcome-msg">
         <h1>- <strong>SOLACE</strong> -</h1><br><h4>Your virtual bookstore</h4>
-        <a href="#" class="btn-section1 btn-login-section1"><strong>Get Started!</strong></a>
+        <a href="templates/login.php" class="btn-section1 btn-login-section1"><strong>Get Started!</strong></a>
         <p>Click to enable / disable sound</p>
       </div>
     </section>
@@ -110,23 +111,42 @@
         </div>
       </div>
     </div>
-    
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="line"></div>
-            <div class="second2">
-              <a href="https://instagram.com" target="_blank"> <i class="fab fa-instagram fa-3x margin"></i></a>
-              <a href="https://github.com/" target="_blank"> <i class="fab fa-github fa-3x margin"></i></a>
-              <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin fa-3x margin"></i></a>
-                  
-            </div>
-            <small class="copyright">Copyright © Solace</small>
-          </div>
-        </div>
+
+    <div class="line-footer"></div>
+    	<!-- Footer -->
+    <footer class="page-footer font-small  pt-4">
+
+      <!-- Footer Elements -->
+      <div class="container-footer">
+      
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center second2">
+          <li class="list-inline-item"><a class="btn-floating btn-fb mx-1" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"> </i></a></li>
+          <li class="list-inline-item"><a class="btn-floating btn-tw mx-1" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"> </i></a></li>
+          <li class="list-inline-item"><a class="btn-floating btn-gplus mx-1" href="https://gmail.com" target="_blank"><i class="fab fa-google-plus-g"> </i></a></li>
+          <li class="list-inline-item"><a class="btn-floating btn-li mx-1" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"> </i></a></li>
+          <li class="list-inline-item"><a class="btn-floating btn-dribbble mx-1" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"> </i></a></li>
+        </ul>
+
+        <h6 class="text-uppercase mb-4 text-center font-weight-bold">Contact</h6>
+
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item"><p><i class="fas fa-home mr-3"></i>New York, NY 10012, US  |</p></li>
+          <li class="list-inline-item"><p><i class="fas fa-envelope mr-3"></i>solace@gmail.com  |</p></li>
+          <li class="list-inline-item"><p><i class="fas fa-phone mr-3"></i>+ 91 90 234 567 88  |</p></li>
+          <li class="list-inline-item"><p><i class="fas fa-print mr-3"></i>+ 91 90 234 567 89</p></li>
+        </ul>
+        <!-- Social buttons -->
+      
       </div>
+      <!-- Footer Elements -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center  py-3">© 2020 Copyright:<a class="text-white" href="#"> Solace</a></div>
+      <!-- Copyright -->
+
     </footer>
+    <!-- Footer -->
 
     <script src="static/js/script.js"></script>
 </body>
