@@ -175,7 +175,28 @@
 				<div class="col-md-7 text-white text-center">
 					
 					<h2>Books with me</h2>
-					<p>Details i.e image of the book picture </p>
+					<div class="container">
+						<div class="row" id="bookOrder"></div>
+					</div>
+				
+						<!-- Template for each book in list -->
+						<template id="orderTemplate">
+						
+								<div class="col-md-4 mb-5">
+									<div class="">
+										<div class="view zoom overlay z-depth-2 rounded">
+											<img class="img-responsive w-100 bookImage" style="height: 200px;" src="" alt="Sample"> <!--Book image here -->
+										</div>
+										<div class="text-center pt-4">
+											<h5 class="bookTitle"></h5> <!--Book title here -->
+											<p class="mb-2 text-muted text-uppercase small bookCategory"></p> <!--Book category here -->
+											<hr>								
+										</div>
+									</div>
+								</div>
+						
+						
+						</template>
 
 					<br><br>
 					
@@ -310,5 +331,7 @@
   
   </footer>
   <!-- Footer -->
+
+  <script src="../static/js/orderHistory.js"></script>
 </html>
 		
