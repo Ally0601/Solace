@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body{
+    background-color: black;
+}
+
 .standout {
     font-size: 20px;
     background-color: red;
@@ -128,7 +132,7 @@
 }
 
 .second2 {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -150,7 +154,15 @@
 .line {
     height:2px;
     background-color:rgb(206,206,206);
-    width:100%;
+    width:90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.line-footer {
+    height:2px;
+    background-color:rgb(206,206,206);
+    width:90%;
+    margin: auto;
 }
 
 .container{
@@ -161,7 +173,13 @@ footer{
     background-color: black;
     color: white;
     padding-bottom: 30px;
+    text-align: center;
     
+}
+
+.container-footer {
+    box-sizing: border-box;
+    color: #777;
 }
 
 @media (min-aspect-ratio:16/9) {

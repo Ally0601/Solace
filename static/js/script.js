@@ -1,6 +1,11 @@
 var video = document.getElementById('videoBG');
 var videoplay = document.getElementById('videoplay');
 
+
+
+
+
+
 function toggleMute() {
   video.muted = !video.muted;
 }
