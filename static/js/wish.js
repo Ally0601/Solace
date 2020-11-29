@@ -47,8 +47,8 @@ const handleRemoveItem = bookId =>  {
 
 const handleAddToCart = bookId => {
 
-    if (cart.length<6)
-    {
+    
+    
     let newBook
     listOfBooks.forEach(book => {
         if(book.bookId == bookId){  //checks book id
@@ -60,6 +60,7 @@ const handleAddToCart = bookId => {
     if (localStorage.getItem("cart")) { //Checks if a cart list already exists in the local storage
         cart = JSON.parse(localStorage.getItem("cart"))
     }
+    if (cart.length<6){
     
     
     cart.push(newBook)

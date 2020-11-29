@@ -6,7 +6,7 @@ setTimeout(() => {
 
     let cartObject
     if (localStorage.getItem("cart")) {
-        cartObject = JSON.parse(localStorage.getItem("cart"))    
+        cartObject = JSON.parse(localStorage.getItem("cart"))
         document.getElementById("bookQty").textContent = cartObject.length
 
         cartObject.forEach(book => {
@@ -30,6 +30,18 @@ setTimeout(() => {
     localStorage.setItem("booksData", JSON.stringify(listOfBooks) ) //listOfBooks is from booksData.js
 
 }, 1);
+
+const emptyCart = () => {
+    localStorage.setItem("cart", [])
+}
+
+const orderBooks = () => {
+    let orderHistoryObject = JSON.parse(localStorage.getItem("cart"));
+    localStorage.setItem("orderHistory", JSON.stringify(orderHistoryObject))
+    emptyCart()
+    location.reload()
+
+}
 
 
 const handleRemoveItem = bookId =>  {
