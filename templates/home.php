@@ -1,17 +1,17 @@
 <?php
-// Start the session
-session_start();
-function console_log( $data ){
-    echo '<script>';
-    echo 'console.log('. json_encode( $data ) .')';
-    echo '</script>';
-  }
-  console_log($_SESSION['email']);
-?>
+    // Start the session
+    session_start();
+    function console_log( $data ){
+        echo '<script>';
+        echo 'console.log('. json_encode( $data ) .')';
+        echo '</script>';
+      }
+      console_log($_SESSION['email']);
+    ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Account</title>
+		<title>Solace|My Account</title>
 		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -30,7 +30,7 @@ function console_log( $data ){
   				<div class="navbar-collapse collapse" id="collapsibleNavbar">
     				<ul class="nav navbar-nav">
       					<li class="nav-item active">
-        					<a class="nav-link" href="#">Home</a>
+        					<a class="nav-link" href="#">My Account</a>
       					</li>
      	  				<li class="nav-item">
         					<a class="nav-link" href="books.html">Books</a>
@@ -54,6 +54,35 @@ function console_log( $data ){
   				</div>  
   			</div>
 		</nav>
+		<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="font-size: 20px !important;">
+            
+			<!-- Navigation Bar Logo / Toggle Icon -
+			<a class="navbar-brand" href="../index.html"><img src="../static/img/icon1.svg" width="60" height="62" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+	  
+			<!-- Navigation Bar Links 
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+				<li class="nav-item active"><a class="nav-link disabled" href="#">Vision</a></li>
+				<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+			  </ul>
+	  
+			  <!-- Navigation Search Bar 
+			  <form class="form-inline my-2 my-lg-0">
+				<div class="container-fluid">
+				  <div class="row">
+					<div class="col-8"><input class="form-control mr-sm-2" type="search" placeholder="Search Genre" aria-label="Search"></div>
+					  <div class="col"><button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search text-white"></i></button></div>
+					</div>
+				  </div>
+			  </form>
+			</div>
+	  
+		  </nav>-->
 		
             <!--Section: Block Content-->
 <section>
@@ -190,7 +219,7 @@ function console_log( $data ){
         		
         		<div class="col-md-5 border  ">
           			<h2 class="d-flex justify-content-center text-white">SELL HERE</h2>
-					<form class="was-validated" action="list-books.php" method="post">
+					<form action="#" class="was-validated">
   					<div class="form-group ">
     					<label for="uname">Book Name:</label>
     					<input type="text" class="form-control" id="uname" placeholder="Enter the book to be sold" name="uname" required>
@@ -206,12 +235,12 @@ function console_log( $data ){
 					<div class="form-group ">
 						<div class="form-check-inline">
 							<label class="form-check-label">
-							  <input type="radio" class="form-check-input" name="fnf" value="Fiction">Fiction
+							  <input type="radio" class="form-check-input" name="fnf">Fiction
 							</label>
 						  </div>
 						  <div class="form-check-inline ">
 								<label class="form-check-label">
-								  <input type="radio" class="form-check-input" name="fnf" value="Non-fiction">Non-fiction
+								  <input type="radio" class="form-check-input" name="fnf">Non-fiction
 								</label>
 						  </div>
 					</div>
@@ -233,7 +262,7 @@ function console_log( $data ){
 					<br><br>
 			 		 <ul>
 						<li style="display:inline-block;">
-							<input name="sub_book" type="submit" class="btn btn-danger" value="SUBMIT">Submit</input>
+							<button type="submit" class="btn btn-danger">Submit</button>
 						</li>
 						<li style="display:inline-block;">
 							<a href="#"  style="color:#f4f4f4"><p>Terms & conditions apply*<p></a>
@@ -247,7 +276,7 @@ function console_log( $data ){
 	<br>
 	<br>
 	<!-- Footer -->
-<footer class="page-footer font-small bg-dark pt-4">
+<footer class="page-footer font-small pt-4">
 
 	<!-- Footer Elements -->
 	<div class="container">
