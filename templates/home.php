@@ -40,14 +40,17 @@
 						  </li>   
 						  <li class="nav-item">
         					<a class="nav-link" href="wish.html">Wish List</a>
-      					</li>   
+						  </li>   
+						  <li class="nav-item">
+							<a class="nav-link" href="review.php">Review</a>
+						  </li>
       					
     				</ul>
     				<ul class="navbar-nav ml-auto">
        					<li class="nav-item ">
-       						<form class="form-inline " action="#">
-    							<input class="form-control mr-sm-2" type="text" placeholder="Books I want to read">
-    							<button class="btn btn-light" type="submit"><span class="fa fa-search"></span> Search</button>
+       						<form class="form-inline " action="logout.php">
+    							<!-- <input class="form-control mr-sm-2" type="text" placeholder="Books I want to read"> -->
+    							<button class="btn btn-light" type="submit"><span class="fa fa-lock"></span> Logout</button>
   							</form>
       					</li>  
     				</ul>
@@ -218,58 +221,58 @@
 			
         		
         		<div class="col-md-5 border  ">
-          			<h2 class="d-flex justify-content-center text-white">SELL HERE</h2>
-					<form action="#" class="was-validated">
-  					<div class="form-group ">
-    					<label for="uname">Book Name:</label>
-    					<input type="text" class="form-control" id="uname" placeholder="Enter the book to be sold" name="uname" required>
-    					<div class="valid-feedback">Valid.</div>
-    					<div class="invalid-feedback">Please fill a book to sell.</div>
-  					</div>
-  					<div class="form-group ">
-    					<label for="uname">Quoted Price in Rs</label>
-    					<input type="number" class="form-control" id="pwd" placeholder="Enter an appropriate price" name="pswd" required>
-    					<div class="valid-feedback">Valid.</div>
-    					<div class="invalid-feedback">Please fill out the desired amount.</div>
-					</div>
-					<div class="form-group ">
-						<div class="form-check-inline">
-							<label class="form-check-label">
-							  <input type="radio" class="form-check-input" name="fnf">Fiction
-							</label>
-						  </div>
-						  <div class="form-check-inline ">
-								<label class="form-check-label">
-								  <input type="radio" class="form-check-input" name="fnf">Non-fiction
-								</label>
-						  </div>
-					</div>
-					<div class="form-group ">
-    					<label for="uname">Genre & description</label>
-    					<input type="text" class="form-control" id="genre" placeholder="Enter an appropriate genre and description" name="genre" required>
-    					<div class="valid-feedback">Valid.</div>
-    					<div class="invalid-feedback">Please fill out the description.</div>
-					</div>
-					<div class="form-group ">
-    					<label for="link">Link of the picture</label>
-    					<input type="link" class="form-control" id="link" placeholder="Enter the link" name="link" required>
-    					<div class="valid-feedback">Valid.</div>
-    					<div class="invalid-feedback">Please paste a link of the image of the front cover.</div>
-					</div>
-									  
-		
-					
-					<br><br>
-			 		 <ul>
-						<li style="display:inline-block;">
-							<button type="submit" class="btn btn-danger">Submit</button>
-						</li>
-						<li style="display:inline-block;">
-							<a href="#"  style="color:#f4f4f4"><p>Terms & conditions apply*<p></a>
-						</li>
-					</ul>
-					</form>
-        		</div>
+                    <h2 class="d-flex justify-content-center text-white">SELL HERE</h2>
+                    <form class="was-validated" action="list-books.php" method="post">
+                        <div class="form-group ">
+                            <label for="uname">Book Name:</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter the book to be sold" name="uname" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill a book to sell.</div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="uname">Quoted Price in Rs</label>
+                            <input type="number" class="form-control" id="pwd" placeholder="Enter an appropriate price" name="pswd" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out the desired amount.</div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="fnf" value="Fiction">Fiction
+                                </label>
+                            </div>
+                            <div class="form-check-inline ">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="fnf" value="Non-fiction">Non-fiction
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="uname">Genre & description</label>
+                            <input type="text" class="form-control" id="genre" placeholder="Enter an appropriate genre and description" name="genre" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out the description.</div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="link">Link of the picture</label>
+                            <input type="link" class="form-control" id="link" placeholder="Enter the link" name="link" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please paste a link of the image of the front cover.</div>
+                        </div>
+                        <br><br>
+                        <ul>
+                            <li style="display:inline-block;">
+                                <input name="sub_book" type="submit" class="btn btn-danger" value="SUBMIT" onclick="myFunction()"></input>
+                            </li>
+                            <li style="display:inline-block;">
+                                <a href="#"  style="color:#f4f4f4">
+                                    <p>Terms & conditions apply*
+                                    <p>
+                                </a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
 			</div>
 		</div>
 	</body>
@@ -341,7 +344,11 @@
   
   </footer>
   <!-- Footer -->
-
+  <script>
+	  function myFunction() {
+		alert("Your book details are sent to the admin!");
+		}
+  </script>
   <script src="../static/js/orderHistory.js"></script>
 </html>
 		

@@ -110,7 +110,7 @@ $(window).resize(function () {
 
 var questions = [
                   "What was the first impression when you entered the website?", 
-                  "What did you hear about us?", 
+                  "How was our service?", 
                   "How was your experience with us?", 
                   "How likely are you to recommend us to your friend or colleague?"
                 ];

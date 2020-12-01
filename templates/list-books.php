@@ -8,8 +8,8 @@ $pic_link = $_POST["link"] ;
 $user=$_SESSION["email"];
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "phpmyadmin";
+$password = "PASSWORD";
 $dbname = "user";
 
 // Create connection
@@ -31,7 +31,7 @@ $sql = "insert into  books (seller, bookname, type, genre, pic, price)
 values ('$user', '$bookname','$type', '$genre', '$pic_link', '$price')";
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
-    header("Location: books.html");
+    header("Location: home.php");
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
