@@ -1,5 +1,5 @@
 <?php
-  $title = "Contact";
+  $title = "Website Survey";
   require_once "./template/header.php";
 ?>
     <div class="row">
@@ -7,8 +7,8 @@
 		<div class="col-md-6 text-center">
 			<form class="form-horizontal">
 			  	<fieldset>
-				    <legend>Contact</legend>
-				    <p class="lead">I’d love to hear from you! Complete the form to send me an email.</p>
+				    <legend>Website Survey</legend>
+				    <p class="lead">This Website Survey will help us improve our website. <br> So please do fill the form given below.</p>
 				    <div class="form-group">
 				      	<label for="inputName" class="col-lg-2 control-label">Name</label>
 				      	<div class="col-lg-10">
@@ -22,10 +22,27 @@
 				      	</div>
 				    </div>
 				    <div class="form-group">
-				      	<label for="textArea" class="col-lg-2 control-label">Textarea</label>
+				      	<label for="textArea" class="col-lg-2 control-label">Q.1</label>
 				      	<div class="col-lg-10">
-				        	<textarea class="form-control" rows="3" id="textArea"></textarea>
-				        	<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+				        	<textarea class="form-control" rows="3" id="textArea" placeholder="What was your first impression when you entered the website?"></textarea>
+				      	</div>
+				    </div>
+				    <div class="form-group">
+				      	<label for="textArea" class="col-lg-2 control-label">Q.2</label>
+				      	<div class="col-lg-10">
+				        	<textarea class="form-control" rows="3" id="textArea" placeholder="How did you first hear about us?"></textarea>				        	
+				      	</div>
+				    </div>
+				    <div class="form-group">
+				      	<label for="textArea" class="col-lg-2 control-label">Q.3</label>
+				      	<div class="col-lg-10">
+				        	<textarea class="form-control" rows="3" id="textArea" placeholder="Is there anything missing on this page?"></textarea>	       	
+				      	</div>
+				    </div>
+				    <div class="form-group">
+				      	<label for="textArea" class="col-lg-2 control-label">Q.4</label>
+				      	<div class="col-lg-10">
+				        	<textarea class="form-control" rows="3" id="textArea" placeholder="How likely are you to recommend us to a friend or colleague?"></textarea>
 				      	</div>
 				    </div>
 				    <div class="form-group">

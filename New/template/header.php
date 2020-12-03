@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">CSE Bookstore</a>
+          <a class="navbar-brand" href="index.php">Solace</a>
         </div>
 
         <!--/.navbar-collapse -->
@@ -34,7 +34,7 @@
               <!-- link to books.php -->
               <li><a href="books.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>
               <!-- link to contacts.php -->
-              <li><a href="contact.php"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp; Contact</a></li>
+              <li><a href="contact.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; Survey</a></li>
               <!-- link to shopping cart -->
               <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp; My Cart</a></li>
             </ul>
@@ -47,9 +47,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Welcome to online CSE bookstore</h1>
-        <p class="lead">This site has been made using PHP with MYSQL (procedure functions)!</p>
-        <p>The layout use Bootstrap to make it more responsive. It's just a simple web!</p>
+        <h1>Welcome to online bookstore : Solace</h1>
+        <p class="lead">Bringing comfort to your doorsteps!</p>
+        <p>Browse through our latest books and purchase them.</p>
       </div>
     </div>
     <?php } ?>

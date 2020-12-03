@@ -2,10 +2,11 @@
 
       	<footer>
         	<div class="text-muted pull-left">
-            	<a href="http://projectworlds.in" target="_blank"> projectworlds </a>
+            	<a class="text-white" href="#"> Solace © 2020 Copyright:</a>
         	</div>
         	<div class="text-muted pull-right">
-          		<a href="admin.php">Admin Login</a> 2017
+          		<!-- <button><a href="admin.php">Admin Login</a></button> -->
+              <button type="button" class="btn btn-light"><a href="admin.php">Admin Login</a> </button>
         	</div>
       	</footer>
     </div> <!-- /container -->
