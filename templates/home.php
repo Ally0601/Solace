@@ -196,7 +196,7 @@
                         <br><br>
                         <ul>
                             <li style="display:inline-block;">
-                                <input name="sub_book" type="submit" class="btn btn-danger" value="SUBMIT">Submit</input>
+                                <input name="sub_book" type="submit" class="btn btn-danger" value="SUBMIT"></input>
                             </li>
                             <li style="display:inline-block;">
                                 <a href="#"  style="color:#f4f4f4">
@@ -272,7 +272,7 @@
         <!-- Footer Elements -->
         <!-- Copyright -->
         <div class="footer-copyright text-center  py-3">© 2020 Copyright:
-            <a class="text-white" href="#"> Solace</a>
+            <a class="text-white" href="#"> Solace </a>
         </div>
         <!-- Copyright -->
     </footer>
